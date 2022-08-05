@@ -179,6 +179,15 @@ RCT_EXPORT_METHOD(initSingleSessionNetverifyWithCustomization:(NSString *)author
 
 - (void)setupCustomization:(NSDictionary*)customization
 {
+    
+   
+
+    if @available(iOS 15.0, *) {
+        [UITableView appearanceWhenContainedInInstancesOfClasses:@[NetverifyViewController.class]].sectionHeaderTopPadding = 24;
+    }
+
+
+
     for (NSString *key in customization) {
         if ([key isEqualToString: @"disableBlur"]) {
             [[NetverifyBaseView jumioAppearance] setDisableBlur: @YES];
