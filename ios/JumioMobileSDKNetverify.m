@@ -182,7 +182,7 @@ RCT_EXPORT_METHOD(initSingleSessionNetverifyWithCustomization:(NSString *)author
     
    
 
-    if @available(iOS 15.0, *) {
+    if (@available(iOS 15.0, *)) {
         [UITableView appearanceWhenContainedInInstancesOfClasses:@[NetverifyViewController.class]].sectionHeaderTopPadding = 24;
     }
 
